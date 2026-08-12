@@ -1,45 +1,22 @@
-import { Text, View } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useEffect, useState } from "react";
+import { Link } from "expo-router";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 
-export default function Index() {
-  const storeData = async (value: any) => {
-    try {
-      const jsonValue = JSON.stringify(value);
-      await AsyncStorage.setItem("my-key", jsonValue);
-    } catch (e) {
-      // saving error
-    }
-  };
-
-  const getData = async () => {
-    try {
-      const jsonValue = await AsyncStorage.getItem("my-key");
-      console.log(jsonValue);
-      return jsonValue != null ? JSON.parse(jsonValue) : null;
-    } catch (e) {
-      // error reading value
-    }
-  };
-
-  useEffect(() => {
-    storeData({
-      name: "Pranav",
-      age: 26,
-    });
-
-    getData();
-  }, []);
-
+const Index = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={styles.container}>
+      <Link href={"/async-storage"}>Async Storage</Link>
+      <Link href={"/secure-storage"}>Secure Storage</Link>
     </View>
   );
-}
+};
+
+export default Index;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

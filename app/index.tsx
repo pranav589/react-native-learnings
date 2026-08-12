@@ -7,6 +7,7 @@ const Index = () => {
     <View style={styles.container}>
       <Link href={"/async-storage"}>Async Storage</Link>
       <Link href={"/secure-storage"}>Secure Storage</Link>
+      <Link href={"/sqlite"}>SQLite</Link>
     </View>
   );
 };

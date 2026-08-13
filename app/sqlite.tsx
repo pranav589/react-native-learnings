@@ -25,7 +25,7 @@ function MainContent() {
 
   const fetchNotes = async () => {
     const allRows = await db.getAllAsync("SELECT * FROM notes");
-
+    //@ts-ignore
     setNotes(allRows);
   };
 

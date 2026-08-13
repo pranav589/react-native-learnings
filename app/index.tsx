@@ -8,6 +8,7 @@ const Index = () => {
       <Link href={"/async-storage"}>Async Storage</Link>
       <Link href={"/secure-storage"}>Secure Storage</Link>
       <Link href={"/sqlite"}>SQLite</Link>
+      <Link href={"/file-system"}>File System</Link>
     </View>
   );
 };

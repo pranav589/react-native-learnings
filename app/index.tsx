@@ -10,6 +10,8 @@ const Index = () => {
       <Link href={"/sqlite"}>SQLite</Link>
       <Link href={"/file-system"}>File System</Link>
       <Link href={"/accelerometer"}>Accelerometer</Link>
+      <Link href={"/gyroscope"}>Gyroscope</Link>
+      <Link href={"/magnetometer"}>Magnetometer</Link>
     </View>
   );
 };

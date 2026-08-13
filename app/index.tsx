@@ -1,10 +1,10 @@
 import { Link } from "expo-router";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 
 const Index = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Link href={"/async-storage"}>Async Storage</Link>
       <Link href={"/secure-storage"}>Secure Storage</Link>
       <Link href={"/sqlite"}>SQLite</Link>
@@ -12,7 +12,9 @@ const Index = () => {
       <Link href={"/accelerometer"}>Accelerometer</Link>
       <Link href={"/gyroscope"}>Gyroscope</Link>
       <Link href={"/magnetometer"}>Magnetometer</Link>
-    </View>
+      <Link href={"/light-sensor"}>Light Sensor</Link>
+      <Link href={"/pedometer"}>Pedometer</Link>
+    </ScrollView>
   );
 };
 

@@ -14,6 +14,11 @@ const Index = () => {
       <Link href={"/magnetometer"}>Magnetometer</Link>
       <Link href={"/light-sensor"}>Light Sensor</Link>
       <Link href={"/pedometer"}>Pedometer</Link>
+      <Link href={"/camera"}>Camera</Link>
+      <Link href="/audio">Audio</Link>
+      <Link href="/notifications/local-notifications">Local Notifications</Link>
+      <Link href="/notifications/push-notifications">Push Notifications</Link>
+      <Link href="/notifications/reminders-app">Reminders App</Link>
     </ScrollView>
   );
 };
